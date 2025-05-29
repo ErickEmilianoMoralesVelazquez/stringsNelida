@@ -11,7 +11,7 @@ public class Main {
         return cadena.toUpperCase();
     }
 
-    public static String convertirMinusculas(String texto) {
+    public static String convertirMinusculasErick(String texto) {
         return texto.toLowerCase();
     }
 
