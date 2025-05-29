@@ -25,8 +25,10 @@ public class Main {
         return limpio.equals(invertido);
     }
 
-    public static String invertirTexto(String texto) {
-        return new StringBuilder(texto).reverse().toString();
+    // Invertir texto mas optimizado
+    public static String invertirTextoJulian(String texto) {
+        StringBuilder sb = new StringBuilder(texto);
+        return sb.reverse().toString();
     }
 
     public static String reemplazarPalabra(String texto, String buscar, String reemplazar) {
@@ -75,7 +77,7 @@ public class Main {
                     System.out.println("¿Es palíndromo? " + (esPalindromo(texto) ? "Sí" : "No"));
                     break;
                 case 6:
-                    System.out.println("Texto invertido: " + invertirTexto(texto));
+                    System.out.println("Texto invertido: " + invertirTextoJulian(texto));
                     break;
                 case 7:
                     System.out.print("Palabra a buscar: ");
