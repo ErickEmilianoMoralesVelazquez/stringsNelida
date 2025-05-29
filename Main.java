@@ -7,7 +7,7 @@ public class Main {
         return texto.length();
     }
 
-    public static String convertirMayusculas(String texto) {
+    public static String convertirMayusculasErick(String texto) {
         return texto.toUpperCase();
     }
 
@@ -63,7 +63,7 @@ public class Main {
                     System.out.println("Total de caracteres: " + contarCaracteres(texto));
                     break;
                 case 2:
-                    System.out.println("Texto en mayúsculas: " + convertirMayusculas(texto));
+                    System.out.println("Texto en mayúsculas: " + convertirMayusculasErick(texto));
                     break;
                 case 3:
                     System.out.println("Texto en minúsculas: " + convertirMinusculas(texto));
