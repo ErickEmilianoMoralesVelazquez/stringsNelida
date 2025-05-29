@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
 
     // Funciones
-    public static int contarCaracteres(String texto) {
+    public static int contarCarateresJesus(String texto) {
         return texto.length();
     }
 
@@ -64,9 +64,7 @@ public class Main {
 
             switch (opcion) {
                 case 1:
-                    System.out.println(
-                        "Total de caracteres: " + contarCaracteres(texto)
-                    );
+                    System.out.println("Total de caracteres: " + contarCarateresJesus(texto));
                     break;
                 case 2:
                     System.out.println(
