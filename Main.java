@@ -7,8 +7,8 @@ public class Main {
         return texto.length();
     }
 
-    public static String convertirMayusculasErick(String texto) {
-        return texto.toUpperCase();
+    public static String Mayusculas(String cadena) {
+        return cadena.toUpperCase();
     }
 
     public static String convertirMinusculas(String texto) {
@@ -29,8 +29,8 @@ public class Main {
         return new StringBuilder(texto).reverse().toString();
     }
 
-    public static String reemplazarPalabra(String texto, String buscar, String reemplazar) {
-        return texto.replaceAll(buscar, reemplazar);
+    public static String remplazar(String cadena, String buscador, String remplazo) {
+        return cadena.replaceAll(buscador, remplazo);
     }
 
     public static String eliminarEspacios(String texto) {
@@ -46,24 +46,24 @@ public class Main {
         do {
             System.out.println("\n=== MENÚ DE OPERACIONES ===");
             System.out.println("1. Contar caracteres");
-            System.out.println("2. Convertir a mayúsculas");
+            System.out.println("2. Convertir a Mayúsculas");
             System.out.println("3. Convertir a minúsculas");
             System.out.println("4. Contar palabras");
             System.out.println("5. Verificar palíndromo");
             System.out.println("6. Invertir texto");
-            System.out.println("7. Reemplazar palabra");
+            System.out.println("7. Reemplazar palabra de una cadena");
             System.out.println("8. Eliminar espacios");
             System.out.println("9. Salir");
             System.out.print("Elige una opción: ");
             opcion = scanner.nextInt();
-            scanner.nextLine(); // limpiar buffer
+            scanner.nextLine();
 
             switch (opcion) {
                 case 1:
                     System.out.println("Total de caracteres: " + contarCaracteres(texto));
                     break;
                 case 2:
-                    System.out.println("Texto en mayúsculas: " + convertirMayusculasErick(texto));
+                    System.out.println("Texto en mayúsculas: " + Mayusculas(texto));
                     break;
                 case 3:
                     System.out.println("Texto en minúsculas: " + convertirMinusculas(texto));
@@ -78,11 +78,11 @@ public class Main {
                     System.out.println("Texto invertido: " + invertirTexto(texto));
                     break;
                 case 7:
-                    System.out.print("Palabra a buscar: ");
-                    String buscar = scanner.nextLine();
-                    System.out.print("Palabra por la que deseas reemplazar: ");
-                    String reemplazar = scanner.nextLine();
-                    System.out.println("Texto modificado: " + reemplazarPalabra(texto, buscar, reemplazar));
+                    System.out.print("Palabra a reemplazar: ");
+                    String buscador = scanner.nextLine();
+                    System.out.print("Ingresa la palabra por la que deseas reemplazar: ");
+                    String remplazo = scanner.nextLine();
+                    System.out.println("Texto reemplazado: " + remplazar(texto, buscador, remplazo));
                     break;
                 case 8:
                     System.out.println("Texto sin espacios: " + eliminarEspacios(texto));
