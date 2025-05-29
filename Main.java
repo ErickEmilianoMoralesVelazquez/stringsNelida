@@ -26,8 +26,9 @@ public class Main {
     }
 
     // Invertir texto mas optimizado
-    public static String invertirTexto(String texto) {
-        return new StringBuilder(texto).reverse().toString();
+    public static String invertirTextoJulian(String texto) {
+        StringBuilder sb = new StringBuilder(texto);
+        return sb.reverse().toString();
     }
 
     public static String remplazar(
@@ -92,7 +93,7 @@ public class Main {
                     );
                     break;
                 case 6:
-                    System.out.println("Texto invertido: " + invertirTexto(texto));
+                    System.out.println("Texto invertido: " + invertirTextoJulian(texto));
                     break;
                 case 7:
                     System.out.print("Palabra a reemplazar: ");
