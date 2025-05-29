@@ -81,7 +81,7 @@ public class Main {
                     break;
                 case 4:
                     System.out.println(
-                        "Total de palabras: " + contarPalabras(texto)
+                        "Total de palabras: " + contarPalabrasAlberto(texto)
                     );
                     break;
                 case 5:
