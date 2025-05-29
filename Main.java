@@ -66,7 +66,7 @@ public class Main {
                     System.out.println("Texto en mayúsculas: " + Mayusculas(texto));
                     break;
                 case 3:
-                    System.out.println("Texto en minúsculas: " + convertirMinusculas(texto));
+                    System.out.println("Texto en minúsculas: " + convertirMinusculasErick(texto));
                     break;
                 case 4:
                     System.out.println("Total de palabras: " + contarPalabras(texto));
