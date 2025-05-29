@@ -15,7 +15,7 @@ public class Main {
         return texto.toLowerCase();
     }
 
-    public static int contarPalabras(String texto) {
+    public static int contarPalabrasAlberto(String texto) {
         return texto.trim().split("\\s+").length;
     }
 
@@ -26,12 +26,15 @@ public class Main {
     }
 
     // Invertir texto mas optimizado
-    public static String invertirTextoJulian(String texto) {
-        StringBuilder sb = new StringBuilder(texto);
-        return sb.reverse().toString();
+    public static String invertirTexto(String texto) {
+        return new StringBuilder(texto).reverse().toString();
     }
 
-    public static String remplazar(String cadena, String buscador, String remplazo) {
+    public static String remplazar(
+        String cadena,
+        String buscador,
+        String remplazo
+    ) {
         return cadena.replaceAll(buscador, remplazo);
     }
 
@@ -62,32 +65,51 @@ public class Main {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("Total de caracteres: " + contarCaracteres(texto));
+                    System.out.println(
+                        "Total de caracteres: " + contarCaracteres(texto)
+                    );
                     break;
                 case 2:
-                    System.out.println("Texto en mayúsculas: " + Mayusculas(texto));
+                    System.out.println(
+                        "Texto en mayúsculas: " + Mayusculas(texto)
+                    );
                     break;
                 case 3:
-                    System.out.println("Texto en minúsculas: " + convertirMinusculasErick(texto));
+                    System.out.println(
+                        "Texto en minúsculas: " +
+                        convertirMinusculasErick(texto)
+                    );
                     break;
                 case 4:
-                    System.out.println("Total de palabras: " + contarPalabras(texto));
+                    System.out.println(
+                        "Total de palabras: " + contarPalabrasAlberto(texto)
+                    );
                     break;
                 case 5:
-                    System.out.println("¿Es palíndromo? " + (esPalindromoBenjamin(texto) ? "Sí" : "No"));
+                    System.out.println(
+                        "¿Es palíndromo? " +
+                        (esPalindromoBenjamin(texto) ? "Sí" : "No")
+                    );
                     break;
                 case 6:
-                    System.out.println("Texto invertido: " + invertirTextoJulian(texto));
+                    System.out.println("Texto invertido: " + invertirTexto(texto));
                     break;
                 case 7:
                     System.out.print("Palabra a reemplazar: ");
                     String buscador = scanner.nextLine();
-                    System.out.print("Ingresa la palabra por la que deseas reemplazar: ");
+                    System.out.print(
+                        "Ingresa la palabra por la que deseas reemplazar: "
+                    );
                     String remplazo = scanner.nextLine();
-                    System.out.println("Texto reemplazado: " + remplazar(texto, buscador, remplazo));
+                    System.out.println(
+                        "Texto reemplazado: " +
+                        remplazar(texto, buscador, remplazo)
+                    );
                     break;
                 case 8:
-                    System.out.println("Texto sin espacios: " + eliminarEspacios(texto));
+                    System.out.println(
+                        "Texto sin espacios: " + eliminarEspacios(texto)
+                    );
                     break;
                 case 9:
                     System.out.println("Saliendo...");
@@ -95,7 +117,6 @@ public class Main {
                 default:
                     System.out.println("Opción inválida.");
             }
-
         } while (opcion != 9);
 
         scanner.close();
